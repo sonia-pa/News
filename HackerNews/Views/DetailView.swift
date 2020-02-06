@@ -1,10 +1,4 @@
-//
-//  DetailView.swift
-//  HackerNews
-//
-//  Created by Sonia Puertas Acosta on 2/5/20.
-//  Copyright © 2020 Sonia Puertas Acosta. All rights reserved.
-//
+
 
 import SwiftUI
 import WebKit
@@ -23,21 +17,4 @@ struct DetailView_Previews: PreviewProvider {
 }
 
 
-struct WebView: UIViewRepresentable {
-    let urlString: String?
-    func makeUIView(context: Context) -> WebView.UIViewType {
-        return WKWebView()
-    }
-    
-    func updateUIView(_ uiView: WKWebView, context: Context) {
-        if let safeString = urlString {
-            if let url = URL(string: safeString) {
-                let request = URLRequest(url: url)
-                uiView.load(request)
-            }
-        }
-    }
-    
-        
-    
-}
+

@@ -11,20 +11,15 @@ struct ContentView: View {
                         Text(String(post.points))
                         Text(post.title)
                     }
-                    
                 }
-                
-                
             }
-                
+            
             .navigationBarTitle("Hacker News")
         }
             /* viewLoad */
             .onAppear {
                 self.networkManager.fetchData()
         }
-        
-        
     }
 }
 
